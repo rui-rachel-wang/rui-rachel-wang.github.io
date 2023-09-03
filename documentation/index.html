@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <meta http-equiv="content-type" content="text/html;charset=utf-8">
-  <title>CSS3_B&W Template</title>
+  <title>CSS3_photo_two Template</title>
   <style type="text/css" media="screen">
     p, table, hr, .box { font-family: arial; margin-bottom:25px; }
     .box p { margin-bottom:10px; }
@@ -12,9 +12,9 @@
 <body>
   <div>
 
-    <h1>&ldquo;CSS3_B&W&rdquo; Template Documentation</h1>
+    <h1>&ldquo;CSS3_photo_two&rdquo; Template Documentation</h1>
 
-    <p><strong>Template version: 2.0<br />Created: July 19th 2012</strong></p>
+    <p><strong>Template version: 2.0<br />Created: March 27th 2012</strong></p>
 
     <div>
       <p>Thank you for downloading this template.</p>
@@ -31,6 +31,7 @@
       <li><a href="#fontFiles">Fonts</a></li>
       <li><a href="#javascript">JavaScript</a></li>
       <li><a href="#credits">Sources and Credits</a></li>
+      <li><a href="#galleries">Image Fader</a></li>
     </ol>
 
     <hr>
@@ -58,18 +59,17 @@
     &lt;!-- end header --&gt;
     &lt;!-- begin content --&gt;
     &lt;div id=&quot;site_content&quot;&gt;
-      &lt;ul id="images"&gt;
-        &lt;li&gt;&lt;img src=&quot;images/1.jpg&quot; width=&quot;600&quot; height=&quot;300&quot; alt=&quot;photo_one&quot; /&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;images/2.jpg&quot; width=&quot;600&quot; height=&quot;300&quot; alt=&quot;photo_two&quot; /&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;images/3.jpg&quot; width=&quot;600&quot; height=&quot;300&quot; alt=&quot;photo_three&quot; /&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;images/4.jpg&quot; width=&quot;600&quot; height=&quot;300&quot; alt=&quot;photo_four&quot; /&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;images/5.jpg&quot; width=&quot;600&quot; height=&quot;300&quot; alt=&quot;photo_five&quot; /&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;img src=&quot;images/6.jpg&quot; width=&quot;600&quot; height=&quot;300&quot; alt=&quot;photo_six&quot; /&gt;&lt;/li&gt;
-      &lt;/ul&gt;
+      &lt;div class=&quot;gallery&quot;&gt;
+        &lt;ul class="images"&gt;
+          &lt;li class=&quot;show&quot;&gt;&lt;img src=&quot;images/1.jpg&quot; width=&quot;950&quot; height=&quot;300&quot; alt=&quot;photo_one&quot; /&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src=&quot;images/2.jpg&quot; width=&quot;950&quot; height=&quot;300&quot; alt=&quot;photo_two&quot; /&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src=&quot;images/3.jpg&quot; width=&quot;950&quot; height=&quot;300&quot; alt=&quot;photo_three&quot; /&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
       &lt;div id=&quot;sidebar_container&quot;&gt;
         &lt;div class=&quot;sidebar&quot;&gt;&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div id=&quot;content&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;!-- end content --&gt;
     &lt;!-- begin footer --&gt;
@@ -80,19 +80,8 @@
   &lt;!-- jQuery with plugins --&gt;
   &lt;script type=&quot;text/javascript&quot;&gt;
     $(document).ready(function(){
-      &lt;!-- initialise image transition --&gt;
-      $('#images').kwicks({
-        max : 600,
-        spacing : 2
-      });
-    });
-  &lt;/script&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    $(function() {
-      $(&quot;#lava_menu&quot;).lavaLamp({
-        fx: &quot;backout&quot;,
-        speed: 700
-      });
+      &lt;!-- initialise sooperfish menu --&gt;
+      $('ul.sf-menu').sooperfish();
     });
   &lt;/script&gt;
 &lt;/html&gt;
@@ -116,8 +105,10 @@
 
     <h3 id="fontFiles"><strong>C) Fonts</strong> - <a href="#toc">top</a></h3>
 
-    <p>There is 1 font used in this theme. The font is News Cycle. The font files are</p>
+    <p>There are 2 fonts used in this theme. The fonts are Yanone Kaffeesatz and News Cycle. The font files are</p>
     <ol>
+      <li><b>fonts/YanoneKaffeesatz-Regular.ttf</b></li>
+      <li><b>fonts/YanoneKaffeesatz-Regular.eot</b> (IE Specific)</li>
       <li><b>fonts/NewsCycle-Regular.ttf</b></li>
       <li><b>fonts/NewsCycle-Regular.eot</b> (IE Specific)</li>
     </ol>
@@ -131,17 +122,17 @@
     <ol>
       <li>js/modernizr-1.5.min.js</li>
       <li>js/jquery.min.js</li>
-      <li>js/jquery.easing.min.js</li>
-      <li>js/jquery.lavalamp.min.js</li>
-      <li>js/jquery.kwicks-1.5.1.js</li>
+      <li>js/jquery.easing-sooper.js</li>
+      <li>js/jquery.sooperfish.js</li>
+      <li>js/jquery.image_fade.js</li>
     </ol>
 
     <ol>
       <li><b>modernizr</b> is a Javascript library that enables HTML5 elements and feature detects.</li>
       <li><b>jQuery</b> is a Javascript library containing lots of commonly used Javascript functions.</li>
-      <li><b>Easing</b> is a jQuery plugin for easing transitions.</li>
-      <li><b>Lavalamp</b> is a jQuery plugin for the lavalamp menu.</li>
-      <li><b>Kwicks</b> is a jQuery plugin for the image transitions.</li>
+      <li><b>Easing sooper</b> is a jQuery plugin for easing transitions, optimised for the Sooperfish drop-down menu.</li>
+      <li><b>Sooperfish</b> is a jQuery plugin for the drop-down menu.</li>
+      <li><b>Image fade</b> contains the functions for the gallery image fader.</li>
     </ol>
 
     <hr>
@@ -153,9 +144,29 @@
     <ul>
       <li><a href="http://www.modernizr.com">modernizr</a> (MIT and BSD licenses)</li>
       <li><a href="http://www.jquery.com">jQuery</a> (MIT and GPL licenses)</li>
-      <li><a href="http://www.gmarwaha.com/blog/2007/08/23/lavalamp-for-jquery-lovers/">Lavalamp menu</a></li>
-      <li><a href="http://www.jeremymartin.name/projects.php?project=kwicks">Kwicks</a> (MIT license)</li>
+      <li>jQuery easing sooper (BSD license)</li>
+      <li><a href="http://archive.plugins.jquery.com/project/SooperFish">Sooperfish</a> (GPL license)</li>
+      <li><a href="http://www.dezinerfolio.com/freebie/project-icon-set">Project Icons - Designed by Navdeep Raj</a>
     </ul>
+
+    <hr>
+
+    <h3 id="galleries"><strong>F) Image Fader</strong> - <a href="#toc">top</a></h3>
+
+    <p>The image fader has the following format:</p>
+
+    <pre>
+&lt;li&gt;&lt;img width="950" height="450" src="images/image_name.jpg" alt="image one" /&gt;&lt;/li&gt;
+    </pre>
+
+    <p>To add an image to the image fader simply add a new list item (li) to the unordered list (ul) with class="images". You need to specify the width of the image, the height of the image, the src and an 'alt' for the image. If you would like the image to hyperlink to another page, simply add an &lt;a&gt;&lt;/a&gt; around the &lt;img&gt; tag.</p>
+    <p>NOTE: Remember to put 'class="show"' on the first &lt;li&gt; in the list, so that the image fader knows which one to start with.</p>
+
+    <hr>
+
+    <p>Once again, thank you for downloading this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist.</p>
+
+    <p><a href="#toc">Go To Table of Contents</a></p>
 
     <hr>
 
